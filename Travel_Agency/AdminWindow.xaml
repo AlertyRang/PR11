@@ -1,0 +1,45 @@
+﻿<Window x:Class="Travel_Agency.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Travel_Agency"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="517*"/>
+            <ColumnDefinition Width="150*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="254*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="99*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="datagrid" Grid.Column="1" Grid.Row="0" Margin="0.4,0,0,19.6" Grid.RowSpan="2" IsReadOnly="True" IsTextSearchCaseSensitive="True"/>
+        <ListBox x:Name="TablesList" HorizontalAlignment="Left" Height="254" VerticalAlignment="Top" Width="141" Grid.RowSpan="2">
+            <ListBoxItem Content="Доп. программы" Selected="Add_Programs_Fill"/>
+            <ListBoxItem Content="Доп. услуги" Selected="Additions_Services_Fill"/>
+            <ListBoxItem Content="Автомобили" Selected="Car_Fill"/>
+            <ListBoxItem Content="Города" Selected="City_Fill"/>
+            <ListBoxItem Content="Страны" Selected="Country_Fill"/>
+            <ListBoxItem Content="Совместительство" Selected="Combination_Fill"/>
+            <ListBoxItem Content="Экскурсии" Selected="Excursion_Fill"/>
+            <ListBoxItem Content="Фирма" Selected="Firm_Fill"/>
+            <ListBoxItem Content="Отели" Selected="Hotel_Fill"/>
+            <ListBoxItem Content="Номера отелей" Selected="Number_Fill"/>
+            <ListBoxItem Content="Должности" Selected="Job_Staff_Fill"/>
+            <ListBoxItem Content="Трапезы" Selected="Meals_Fill"/>
+            <ListBoxItem Content="Сотрудники" Selected="Staff_Fill"/>
+            <ListBoxItem Content="Способы отправления" Selected="Type_Sending_Fill"/>
+            <ListBoxItem Content="Типы путевок" Selected="Type_Voucher_Fill"/>
+        </ListBox>
+        <Button x:Name="Exist" Content="Выход" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="36,59.2,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Click="Exist_Click"/>
+        <Button x:Name="AddData" Content="Добавить" Grid.Column="1" HorizontalAlignment="Left" Height="45" Margin="85.4,0.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="110" Click="AddData_Click"/>
+        <Button x:Name="RedData" Content="Изменить" Grid.Column="1" HorizontalAlignment="Left" Height="45" Margin="200.4,0.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="110" Click="RedData_Click"/>
+        <Button x:Name="DeleteData" Content="Удалить" Grid.Column="1" HorizontalAlignment="Left" Height="45" Margin="315.4,0.4,0,0" Grid.Row="2" VerticalAlignment="Top" Width="110" Click="DeleteData_Click"/>
+        <Button x:Name="Settings" Content="Настройки" HorizontalAlignment="Left" Height="30" Margin="10,59.2,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Click="Settings_Click"/>
+    </Grid>
+</Window>

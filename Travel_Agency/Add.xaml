@@ -1,0 +1,61 @@
+﻿<Window x:Class="Travel_Agency.Add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Travel_Agency"
+        mc:Ignorable="d"
+        Title="Добавить" Height="300" Width="800" Loaded="Window" ResizeMode="NoResize">
+    <Grid x:Name="GR">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="82*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="187*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="82*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="11*"/>
+        </Grid.RowDefinitions>
+        <Label IsEnabled="False" x:Name="L_One" Content="-" Background="Gray" Grid.Row="1" FontSize="11" Grid.ColumnSpan="2" Margin="82,0.6,0.4,27.6" Grid.RowSpan="2"/>
+        <Label IsEnabled="False" x:Name="L_Two" Content="-" Background="Gray" Grid.Row="3" FontSize="11" Grid.ColumnSpan="2" Margin="82,0.4,0.4,27.4" Grid.RowSpan="2"/>
+        <Label IsEnabled="False" x:Name="L_Three" Content="-" Background="Gray" Grid.Row="5" FontSize="11" Grid.ColumnSpan="2" Margin="82,0.6,0.4,0.2"/>
+        <Label IsEnabled="False" x:Name="L_Four" Content="-" Background="Gray" Grid.Row="1" FontSize="11" Grid.Column="3" Grid.ColumnSpan="2" Margin="187.8,0.6,0.2,27.6" Grid.RowSpan="2"/>
+        <Label IsEnabled="False" x:Name="L_Five" Content="-" Background="Gray" Grid.Row="3" FontSize="11" Grid.Column="3" Grid.ColumnSpan="2" Margin="187.8,0.4,0.2,27.4" Grid.RowSpan="2"/>
+
+        <TextBox IsEnabled="False" x:Name="TB_One"  Grid.Row="1" FontSize="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="99.6,0.6,0.2,27.6" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CB_One" Visibility="Hidden" Grid.Row="1" FontSize="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="99.6,0.6,0.2,27.6" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CB_One_V2" Visibility="Hidden" Grid.Row="1" FontSize="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="99.6,0.6,0.2,27.6" Grid.RowSpan="2"/>
+
+        <TextBox IsEnabled="False" x:Name="TB_Two"  Grid.Row="3" FontSize="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="99.6,0.4,0.2,27.4" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CB_Two" Visibility="Hidden" Grid.Row="3" FontSize="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="99.6,0.4,0.2,27.4" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CB_Two_V2" Visibility="Hidden" Grid.Row="3" FontSize="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="99.6,0.4,0.2,27.4" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CB_Two_V3" Visibility="Hidden" Grid.Row="3" FontSize="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="99.6,0.4,0.2,27.4" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CB_Two_V4" Visibility="Hidden" Grid.Row="3" FontSize="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="99.6,0.4,0.2,27.4" Grid.RowSpan="2"/>
+
+        <TextBox IsEnabled="False" x:Name="TB_Three"  Grid.Row="5" FontSize="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="99.6,0.6,0.2,0.2"/>
+        <ComboBox x:Name="CB_Three" Visibility="Hidden" Grid.Row="5" FontSize="11" Grid.Column="1" Grid.ColumnSpan="2" Margin="99.6,0.6,0.2,0.2"/>
+
+        <TextBox IsEnabled="False" x:Name="TB_Four"  Grid.Row="1" FontSize="11" Grid.Column="4" Grid.ColumnSpan="2" Margin="99.8,0.6,0.2,27.6" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CB_Four" Visibility="Hidden" Grid.Row="1" FontSize="11" Grid.Column="4" Grid.ColumnSpan="2" Margin="99.8,0.6,0.2,27.6" Grid.RowSpan="2"/>
+
+        <TextBox IsEnabled="False" x:Name="TB_Five"  Grid.Row="3" FontSize="11" Grid.Column="4" Grid.ColumnSpan="2" Margin="99.8,0.4,0.2,27.4" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CB_Five" Visibility="Hidden" Grid.Row="3" FontSize="11" Grid.Column="4" Grid.ColumnSpan="2" Margin="99.8,0.4,0.2,27.4" Grid.RowSpan="2"/>
+        <ComboBox x:Name="CB_Five_V2" Visibility="Hidden" Grid.Row="3" FontSize="11" Grid.Column="4" Grid.ColumnSpan="2" Margin="99.8,0.4,0.2,27.4" Grid.RowSpan="2"/>
+
+        <Button x:Name="Comf" Content="Потдвердить" Grid.Column="2" Grid.Row="7" FontSize="14" Click="Comf_Click"/>
+        <Button x:Name="Can" Content="Отмена" Grid.Column="4" Grid.Row="7" FontSize="14" Click="Can_Click"/>
+        <Label IsEnabled="False" x:Name="L_Six" Content="-" Background="Gray" Grid.Row="5" FontSize="11" Grid.Column="4"/>
+        <TextBox IsEnabled="False" x:Name="TB_Six"  Grid.Row="5" FontSize="11" Grid.Column="5"/>
+    </Grid>
+</Window>

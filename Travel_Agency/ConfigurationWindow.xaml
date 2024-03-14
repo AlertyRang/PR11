@@ -1,0 +1,45 @@
+﻿<Window x:Class="Travel_Agency.ConfigurationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Travel_Agency"
+        mc:Ignorable="d"
+        Title="Настройки БД" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid x:Name="GR" Background="#FFCACACA">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="DBSL" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="2" Text="Введите название сети..." FontFamily="Times New Roman" FontSize="16" TextAlignment="Center"/>
+        <ComboBox Name="DBL" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="4" GotFocus="GetDB_Click"/>
+        <ComboBox Name="LIZ" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="6" FontFamily="Times New Roman" FontSize="14">
+            <ComboBoxItem Name="LIZWIN" Content="Проверка подлинности Windows" FontFamily="Times New Roman" Background="#FFE4E4E4" Selected="LIZWIN_Selected"/>
+            <ComboBoxItem Name="LIZSQL" Content="Проверка подлинности SQL Server" FontFamily="Times New Roman" Background="#FFE4E4E4" Selected="LIZSQL_Selected"/>
+        </ComboBox>
+        <Button Name="DBConnect" Content="Подключиться" Grid.Column="6" Grid.Row="2" FontFamily="Times New Roman" FontSize="14" IsEnabled="False" Click="DBConnect_Click"/>
+        <Button Name="DBCancel" Content="Отмена" Grid.Column="6" Grid.Row="4" FontFamily="Times New Roman" FontSize="14" Click="DBCancel_Click"/>
+        <TreeView x:Name="Vbr" Grid.Column="0" Grid.Row="1" Grid.RowSpan="7"/>
+        <TextBox x:Name="NM" Grid.Column="2" HorizontalAlignment="Left" Height="0" Margin="50,27,0,0" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2" Background="White" FontFamily="Times New Roman" FontSize="14" TextAlignment="Center"/>
+        <PasswordBox x:Name="PW" Grid.Column="3" HorizontalAlignment="Left" Height="0" Grid.Row="7" VerticalAlignment="Bottom" Width="200" Background="White" Password="DDDDDDDDD"/>
+        <Label x:Name="LB_L" Content="Password" Grid.Column="3" HorizontalAlignment="Left" Margin="67,51,0,0" Grid.Row="7" Width="66" FontWeight="Bold" Height="0" VerticalAlignment="Top"/>
+        <Label x:Name="LB_P" Content="Login" Grid.Column="3" HorizontalAlignment="Left" Margin="79,0,0,0" Grid.Row="7" Width="42" FontWeight="Bold" Height="0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
